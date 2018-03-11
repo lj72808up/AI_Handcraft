@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 def getDataset():
-    data = pd.read_csv("../datasets/census.csv")
+    data = pd.read_csv("../../datasets/census.csv")
     #print(data.shape)
 
     # 将数据切分成特征和对应的标签

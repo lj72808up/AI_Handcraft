@@ -8,6 +8,7 @@
 - [3.逻辑回归](ml/supervised/LogisticRegression.py)
 - [4.高斯混合模型](ml/unsupervised/GaussianMixtureByEM.py)
 - [5.Kmeans](ml/unsupervised/Kmeans.py)
+- [6.Adaboost-线性加权lR](ml/supervised/AdaBoost.py) - tanh激活函数待改善
 
 ## 数据处理
 - [PCA](ml/datahandle/PCA.py)

@@ -15,6 +15,6 @@
 - [matplotlab - 泰坦尼克生还者](preproccess/TitanicPlot.py)
 - [数据编码,倾斜处理](preproccess/HandleDatasets.py)
 ## Blog
-- [0-数据预处理.ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/0-数据预处理.ipynb)
-- [1-高斯混合与EM算法,ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/1-高斯混合与EM算法.ipynb)
-- [4-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/4-推荐系统.ipynb)
+- [0-数据预处理.ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/0-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86.ipynb)
+- [1-高斯混合与EM算法,ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/1-%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E4%B8%8EEM%E7%AE%97%E6%B3%95.ipynb)
+- [4-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/4-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.ipynb)

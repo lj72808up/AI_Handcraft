@@ -3,6 +3,7 @@
 * 使用sklearn的评分包对算法进行评价
 * 监督, 非监督在ml下
 * 机器学习笔记 - blog
+- [0.数据预处理](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/0-数据预处理.ipynb)
 - [1.决策树](ml/supervised/DessionTree.py)
 - [2.线性回归](ml/supervised/LinearRegression.py)
 - [3.逻辑回归](ml/supervised/LogisticRegression.py)

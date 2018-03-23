@@ -4,7 +4,7 @@ import pandas as pd
 import math
 import copy
 
-# 给dataframe的所有字段进行数值编码
+# 给dataframe的所有字段进行数值编码,将不同类型转换为数字编码
 def mark_Label(markList, data):
     from sklearn import preprocessing
     encoder = preprocessing.LabelEncoder()

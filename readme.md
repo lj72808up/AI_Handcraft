@@ -3,7 +3,6 @@
 * 使用sklearn的评分包对算法进行评价
 * 监督, 非监督在ml下
 * 机器学习笔记 - blog
-- [0.数据预处理](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/0-数据预处理.ipynb)
 - [1.决策树](ml/supervised/DessionTree.py)
 - [2.线性回归](ml/supervised/LinearRegression.py)
 - [3.逻辑回归](ml/supervised/LogisticRegression.py)
@@ -16,4 +15,6 @@
 - [matplotlab - 泰坦尼克生还者](preproccess/TitanicPlot.py)
 - [数据编码,倾斜处理](preproccess/HandleDatasets.py)
 ## Blog
-- [1-高斯混合与EM算法.ipynb](blog/1-高斯混合与EM算法.ipynb)
+- [0-数据预处理.ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/0-数据预处理.ipynb)
+- [1-高斯混合与EM算法,ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/blog/1-高斯混合与EM算法.ipynb)
+- [4-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/AI_Handcraft/blob/master/4-推荐系统.ipynb)

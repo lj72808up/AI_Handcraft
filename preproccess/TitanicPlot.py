@@ -3,11 +3,19 @@ import numpy as np
 import pandas as pd
 
 def showData():
-    data_train = pd.read_csv("datasets/titanic.csv")
+    data_train = pd.read_csv("../datasets/titanic.csv")
     #data.drop(['PassengerId','Survived','Ticket'],axis=1,inplace=True)
-    #print data.head()
+    #print data_train.head()
 
     import matplotlib.pyplot as plt
+
+    # 把年龄分成4个范围,并计算这些范围内的人数
+    fig = plt.figure()
+    fig.set(alpha=0.2)
+    # bins为列表,按元素范围切割. bins为int数字,自动分成n个区间
+    pd.cut(data_train["Age"],bins=[0,20,40,60,80]).value_counts().plot("bar")
+    plt.show()
+
     fig = plt.figure()  # 图片大小可在这个设置
     fig.set(alpha=0.2)  # 设定图表颜色alpha参数
 

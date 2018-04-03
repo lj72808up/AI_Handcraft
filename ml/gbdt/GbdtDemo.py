@@ -29,30 +29,52 @@ def getData():
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
-if __name__ == "__main__":
-    X_train, X_val, X_test, y_train, y_val, y_test = getData()
-
+def gbdtTrain(X_train,y_train,n):
     from sklearn.ensemble import GradientBoostingClassifier
-    from sklearn.model_selection import GridSearchCV
-
-    clf = GradientBoostingClassifier(random_state=1,n_estimators=100,max_depth=10)
+    clf = GradientBoostingClassifier(random_state=1, n_estimators=n, max_depth=3)
+    # from sklearn.model_selection import GridSearchCV
     # param_test1 = {'n_estimators':[200],'max_depth':[3,7,9]}
     # clf = gsearch1 = GridSearchCV(estimator=GradientBoostingClassifier(random_state=10,),
     #                               param_grid=param_test1, scoring='roc_auc', iid=False, cv=5)
-    clf.fit(X_train, y_train)
-    predict = clf.predict(X_test)
+    clf = clf.fit(X_train, y_train)
+    print "GBDT weight:%s" % clf.feature_importances_
+    return clf
 
+def randomForest(X_train,y_train,n):
+    from sklearn.ensemble import RandomForestClassifier
+    clf = RandomForestClassifier(n_estimators=n)
+    clf = clf.fit(X_train, y_train)
+    print "randomforest weight:%s" % clf.feature_importances_
+    return clf
 
+def evaluate(clf,y_test):
     from sklearn.metrics import fbeta_score, accuracy_score, confusion_matrix
-
+    predict = clf.predict(X_test)
     accuracy = accuracy_score(y_test, predict)
     fscore = fbeta_score(y_test, predict, beta=0.5)
     print "Final accuracy score on the validation data: {:.4f}".format(accuracy)
-    print "F-score on validation data: {:.4f}".format(fbeta_score(y_test, predict, beta=0.5))
+    print "F-score on validation data: {:.4f}".format(fscore)
     print confusion_matrix(y_test, predict)
 
-    from sklearn import tree
+
+def tree_visualization(clf):
     import graphviz
-    dot_data = tree.export_graphviz(clf, out_file="out1.file")
+    # 查看GBDT的第一棵树
+    from sklearn import tree
+    dot_data = tree.export_graphviz(clf.estimators_[0][0], out_file=None,
+                                    filled=True,
+                                    rounded=True,
+                                    special_characters=True,
+                                    proportion=True,
+                                    )
     graph = graphviz.Source(dot_data)
-    graph.render("iris")
+    graph.render("out.file")
+
+
+if __name__ == "__main__":
+    n = 10
+    X_train, X_val, X_test, y_train, y_val, y_test = getData()
+    clf = gbdtTrain(X_train,y_train,n)
+    # clf = randomForest(X_train,y_train,n)
+    evaluate(clf,y_test)
+    tree_visualization(clf)

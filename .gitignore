@@ -106,4 +106,4 @@ venv.bak/
 .mypy_cache/
 
 .idea/
-"blog/.ipynb_checkpoints"
+blog/.ipynb_checkpoints

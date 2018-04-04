@@ -19,3 +19,6 @@
 - [1-高斯混合与EM算法,ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/1-%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E4%B8%8EEM%E7%AE%97%E6%B3%95.ipynb)
 - [4-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/4-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.ipynb)
 - [5-CART决策树.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/5-决策树.ipynb)
+
+## Tuning Parameters
+- [GBDT](blog/GBM_Tuning_Parameters.pdf)

@@ -38,7 +38,11 @@ def gbdtTrain(X_train, y_train, n):
     param_test1 = {'n_estimators': [100, 150, 200], 'max_depth': [3, 5, 6, 7], 'learning_rate': rateList}
     clf = gsearch1 = GridSearchCV(estimator=GradientBoostingClassifier(random_state=10, subsample=0.8),
                                   param_grid=param_test1, scoring='roc_auc', iid=False, cv=5)
+    import time
+    start = time.time()
     clf = clf.fit(X_train, y_train)
+    stop = time.time()
+    print "training cost %s s" % int(stop-start)
     print clf.best_estimator_
     # print "features weight:%s" % clf.feature_importances_
     return clf

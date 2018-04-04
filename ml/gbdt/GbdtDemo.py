@@ -29,25 +29,30 @@ def getData():
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
-def gbdtTrain(X_train,y_train,n):
+def gbdtTrain(X_train, y_train, n):
     from sklearn.ensemble import GradientBoostingClassifier
-    clf = GradientBoostingClassifier(random_state=1, n_estimators=n, max_depth=3)
-    # from sklearn.model_selection import GridSearchCV
-    # param_test1 = {'n_estimators':[200],'max_depth':[3,7,9]}
-    # clf = gsearch1 = GridSearchCV(estimator=GradientBoostingClassifier(random_state=10,),
-    #                               param_grid=param_test1, scoring='roc_auc', iid=False, cv=5)
+    # 降低学习率,增加基学习器的个数, 来构造更健壮的模型
+    # clf = GradientBoostingClassifier(random_state=1, n_estimators=n,learning_rate=0.2, max_depth=5,verbose=0)
+    from sklearn.model_selection import GridSearchCV
+    rateList = [(i*1.0)/100 for i in range(5, 40,2)]
+    param_test1 = {'n_estimators': [100, 150, 200], 'max_depth': [3, 5, 6, 7], 'learning_rate': rateList}
+    clf = gsearch1 = GridSearchCV(estimator=GradientBoostingClassifier(random_state=10, subsample=0.8),
+                                  param_grid=param_test1, scoring='roc_auc', iid=False, cv=5)
     clf = clf.fit(X_train, y_train)
-    print "GBDT weight:%s" % clf.feature_importances_
+    print clf.best_estimator_
+    # print "features weight:%s" % clf.feature_importances_
     return clf
 
-def randomForest(X_train,y_train,n):
+
+def randomForest(X_train, y_train, n):
     from sklearn.ensemble import RandomForestClassifier
     clf = RandomForestClassifier(n_estimators=n)
     clf = clf.fit(X_train, y_train)
     print "randomforest weight:%s" % clf.feature_importances_
     return clf
 
-def evaluate(clf,y_test):
+
+def evaluate(clf, y_test):
     from sklearn.metrics import fbeta_score, accuracy_score, confusion_matrix
     predict = clf.predict(X_test)
     accuracy = accuracy_score(y_test, predict)
@@ -61,20 +66,21 @@ def tree_visualization(clf):
     import graphviz
     # 查看GBDT的第一棵树
     from sklearn import tree
-    dot_data = tree.export_graphviz(clf.estimators_[0][0], out_file=None,
-                                    filled=True,
-                                    rounded=True,
-                                    special_characters=True,
-                                    proportion=True,
-                                    )
-    graph = graphviz.Source(dot_data)
-    graph.render("out.file")
+    print "estimator number: %s" % str(clf.estimators_.shape)
+    # dot_data = tree.export_graphviz(clf.estimators_[0][0], out_file=None,
+    #                                 filled=True,
+    #                                 rounded=True,
+    #                                 special_characters=True,
+    #                                 proportion=True,
+    #                                 )
+    # graph = graphviz.Source(dot_data)
+    # graph.render("out.file")
 
 
 if __name__ == "__main__":
-    n = 10
+    n = 104
     X_train, X_val, X_test, y_train, y_val, y_test = getData()
-    clf = gbdtTrain(X_train,y_train,n)
+    clf = gbdtTrain(X_train, y_train, n)
     # clf = randomForest(X_train,y_train,n)
-    evaluate(clf,y_test)
+    evaluate(clf, y_test)
     tree_visualization(clf)

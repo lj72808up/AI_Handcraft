@@ -29,7 +29,7 @@ def getData():
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
-def gbdtTrain(X_train, y_train, n):
+def gbdtTrain(X_train, y_train):
     from sklearn.ensemble import GradientBoostingClassifier
     from sklearn.externals.joblib import Memory
     from sklearn.pipeline import Pipeline
@@ -47,6 +47,7 @@ def gbdtTrain(X_train, y_train, n):
     max_depth = [3]
     n_features = [8, 10]
     # "step1_reduceDim__n_components":表示pipeline中step1_reduceDim这一步的n_components参数
+    # 定义两个流水线,每个流水线中都有一组可选参数. 网格搜索所有流水线的所有参数组合
     param1 = {"step1_reduceDim": [PCA(iterated_power=7), NMF()],
               "step1_reduceDim__n_components":n_features,
               "step2_clf__n_estimators":n_estimators,
@@ -57,7 +58,13 @@ def gbdtTrain(X_train, y_train, n):
               "step2_clf__max_depth":max_depth}
     paramGrid = [param1,param2]
     cpuNumber = cpu_count()
-    gridClf = GridSearchCV(pipe,cv=3,n_jobs=cpuNumber,param_grid=paramGrid)
+    from sklearn.metrics import fbeta_score
+    from sklearn.metrics import make_scorer
+    # 3折交叉验证,开启cpuNum个线程并行网格搜索
+    gridClf = GridSearchCV(pipe,cv=3,
+                           n_jobs=cpuNumber,
+                           param_grid=paramGrid,
+                           scoring=make_scorer(fbeta_score,beta=0.5))
     import time
     start = time.time()
     gridClf = gridClf.fit(X_train, y_train)
@@ -65,7 +72,7 @@ def gbdtTrain(X_train, y_train, n):
     print "training cost %s s" % int(stop - start)
     print gridClf.best_estimator_
     print "====================================="
-    print "cv_results: %s" % gridClf.cv_results_['mean_test_score']
+    print "cv_results: %s" % gridClf.cv_results_['mean_test_score'] # 输出的均值为f1-score评分
     print "====================================="
     print "features weight:"
     # 从网格中获取最优的pipeline,再从中获取gbdt分类器的属性权重
@@ -111,7 +118,7 @@ def tree_visualization(clf):
 if __name__ == "__main__":
     n = 104
     X_train, X_val, X_test, y_train, y_val, y_test = getData()
-    clf = gbdtTrain(X_train, y_train, n)
+    clf = gbdtTrain(X_train, y_train)
     # clf = randomForest(X_train,y_train,n)
     evaluate(clf, y_test)
     # tree_visualization(clf)

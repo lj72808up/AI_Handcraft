@@ -73,6 +73,8 @@ def gbdtTrain(X_train, y_train):
     print gridClf.best_estimator_
     print "====================================="
     print "cv_results: %s" % gridClf.cv_results_['mean_test_score'] # 输出的均值为f1-score评分
+    # 打印网格搜索的所有参数组合机器得分
+    # print gridClf.grid_scores_
     print "====================================="
     print "features weight:"
     # 从网格中获取最优的pipeline,再从中获取gbdt分类器的属性权重

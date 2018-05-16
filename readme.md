@@ -9,6 +9,8 @@
 - [4.高斯混合模型](ml/unsupervised/GaussianMixtureByEM.py)
 - [5.Kmeans](ml/unsupervised/Kmeans.py)
 - [6.Adaboost-线性加权lR](ml/supervised/AdaBoost.py) - tanh激活函数待改善
+- [7.gbdt-pipeline,网格搜索](ml/gbdt/GbdtDemo.py)
+- [8.xgboost](ml/gbdt/XgboostDemo.py)
 
 ## 数据处理
 - [PCA](ml/datahandle/PCA.py)

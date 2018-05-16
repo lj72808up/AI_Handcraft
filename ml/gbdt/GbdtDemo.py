@@ -29,23 +29,59 @@ def getData():
     return X_train, X_val, X_test, y_train, y_val, y_test
 
 
-def gbdtTrain(X_train, y_train, n):
+def gbdtTrain(X_train, y_train):
     from sklearn.ensemble import GradientBoostingClassifier
-    # 降低学习率,增加基学习器的个数, 来构造更健壮的模型
-    # clf = GradientBoostingClassifier(random_state=1, n_estimators=n,learning_rate=0.2, max_depth=5,verbose=0)
+    from sklearn.externals.joblib import Memory
+    from sklearn.pipeline import Pipeline
     from sklearn.model_selection import GridSearchCV
-    rateList = [(i*1.0)/100 for i in range(5, 40,2)]
-    param_test1 = {'n_estimators': [100, 150, 200], 'max_depth': [3, 5, 6, 7], 'learning_rate': rateList}
-    clf = gsearch1 = GridSearchCV(estimator=GradientBoostingClassifier(random_state=10, subsample=0.8),
-                                  param_grid=param_test1, scoring='roc_auc', iid=False, cv=5)
+    from multiprocessing import cpu_count
+
+    from sklearn.feature_selection import SelectKBest, chi2
+    # 降低GBDT学习率,增加基学习器的个数, 来构造更健壮的模型
+    # pipeline中存在特征处理的操作,可以通过缓存的手段避免模型调参时反复转换特征
+    pipe = Pipeline(steps=[("step1_reduceDim", None),
+                           ("step2_clf", GradientBoostingClassifier(random_state=10, subsample=0.8))],
+                    memory = Memory(cachedir="./tmp",verbose=0))
+    from sklearn.decomposition import PCA, NMF
+    n_estimators= [50]
+    max_depth = [3]
+    n_features = [8, 10]
+    # "step1_reduceDim__n_components":表示pipeline中step1_reduceDim这一步的n_components参数
+    # 定义两个流水线,每个流水线中都有一组可选参数. 网格搜索所有流水线的所有参数组合
+    param1 = {"step1_reduceDim": [PCA(iterated_power=7), NMF()],
+              "step1_reduceDim__n_components":n_features,
+              "step2_clf__n_estimators":n_estimators,
+              "step2_clf__max_depth":max_depth}
+    param2 = {"step1_reduceDim": [SelectKBest(chi2)],
+              "step1_reduceDim__k": n_features,
+              "step2_clf__n_estimators":n_estimators,
+              "step2_clf__max_depth":max_depth}
+    paramGrid = [param1,param2]
+    cpuNumber = cpu_count()
+    from sklearn.metrics import fbeta_score
+    from sklearn.metrics import make_scorer
+    # 3折交叉验证,开启cpuNum个线程并行网格搜索
+    gridClf = GridSearchCV(pipe,cv=3,
+                           n_jobs=cpuNumber,
+                           param_grid=paramGrid,
+                           scoring=make_scorer(fbeta_score,beta=0.5))
     import time
     start = time.time()
-    clf = clf.fit(X_train, y_train)
+    gridClf = gridClf.fit(X_train, y_train)
     stop = time.time()
-    print "training cost %s s" % int(stop-start)
-    print clf.best_estimator_
-    # print "features weight:%s" % clf.feature_importances_
-    return clf
+    print "training cost %s s" % int(stop - start)
+    print gridClf.best_estimator_
+    print "====================================="
+    print "cv_results: %s" % gridClf.cv_results_['mean_test_score'] # 输出的均值为f1-score评分
+    # 打印网格搜索的所有参数组合机器得分
+    # print gridClf.grid_scores_
+    print "====================================="
+    print "features weight:"
+    # 从网格中获取最优的pipeline,再从中获取gbdt分类器的属性权重
+    print gridClf.best_estimator_.named_steps['step2_clf'].feature_importances_
+    from shutil import rmtree
+    rmtree("./tmp")
+    return gridClf
 
 
 def randomForest(X_train, y_train, n):
@@ -84,7 +120,7 @@ def tree_visualization(clf):
 if __name__ == "__main__":
     n = 104
     X_train, X_val, X_test, y_train, y_val, y_test = getData()
-    clf = gbdtTrain(X_train, y_train, n)
+    clf = gbdtTrain(X_train, y_train)
     # clf = randomForest(X_train,y_train,n)
     evaluate(clf, y_test)
-    tree_visualization(clf)
+    # tree_visualization(clf)

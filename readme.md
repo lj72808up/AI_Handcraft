@@ -24,3 +24,6 @@
 
 ## Tuning Parameters
 - [GBDT](blog/GBM_Tuning_Parameters.pdf)
+
+## Jupyter-spark环境
+- [pySpark与scala spark](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/Jupyter-spark%E9%85%8D%E7%BD%AE.ipynb)

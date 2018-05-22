@@ -27,3 +27,24 @@
 
 ## Jupyter-spark环境
 - [pySpark与scala spark](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/Jupyter-spark%E9%85%8D%E7%BD%AE.ipynb)
+
+## 数学技能书
+### 第一层
+#### 1. 点集拓扑 
+1. [点集拓扑-王彦英.avi](http://v.youku.com/v_show/id_XNzM4MjU5ODg=.html?spm=a2h1n.8251843.playList.5~5~A&f=22245870&o=1)
+2. [点集拓扑讲义-与上面视频配套书籍](https://page72.ctfile.com/fs/1623972-206656801)
+3. [基础拓扑学-阿姆斯壮](http://www.hejizhan.com/html/res/268.html)
+#### 2. 抽象代数
+#### 3. 高等代数与矩阵
+### 第二层
+#### 1. 数学分析
+#### 2. 实分析
+#### 3. 测度论
+### 第三层
+#### 1. 概率
+#### 2. 泛函分析与积分变换
+#### 3. ODE
+### 第四层
+#### 1. 随机过程
+#### 2. PDE
+#### 3. 随机微分方程

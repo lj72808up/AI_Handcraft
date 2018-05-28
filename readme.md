@@ -16,11 +16,15 @@
 - [PCA](ml/datahandle/PCA.py)
 - [matplotlab - 泰坦尼克生还者](preproccess/TitanicPlot.py)
 - [数据编码,倾斜处理](preproccess/HandleDatasets.py)
+
 ## Blog
 - [0-数据预处理.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/0-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86.ipynb)
-- [1-高斯混合与EM算法,ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/1-%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E4%B8%8EEM%E7%AE%97%E6%B3%95.ipynb)
+- [1-高斯混合与EM算法.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/1-%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E4%B8%8EEM%E7%AE%97%E6%B3%95.ipynb)
 - [4-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/4-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.ipynb)
 - [5-CART决策树.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/5-决策树.ipynb)
+### 1. 聚类与检索  
+- [聚类与检索(KNN,TF-IDF,KD-Tree,K-Means,EM](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2%28KNN%2CTF-IDF%2CKD-Tree%2CK-Means%2CEM%29.ipynb)
+
 
 ## Tuning Parameters
 - [GBDT](blog/GBM_Tuning_Parameters.pdf)

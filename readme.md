@@ -1,44 +1,63 @@
-## 机器学习算法实现
-* 使用pandas, numpy实现几种机器学习算法
-* 使用sklearn的评分包对算法进行评价
-* 监督, 非监督在ml下
-* 机器学习笔记 - blog
-- [1.决策树](ml/supervised/DessionTree.py)
-- [2.线性回归](ml/supervised/LinearRegression.py)
-- [3.逻辑回归](ml/supervised/LogisticRegression.py)
-- [4.高斯混合模型](ml/unsupervised/GaussianMixtureByEM.py)
-- [5.Kmeans](ml/unsupervised/Kmeans.py)
-- [6.Adaboost-线性加权lR](ml/supervised/AdaBoost.py) - tanh激活函数待改善
-- [7.gbdt-pipeline,网格搜索](ml/gbdt/GbdtDemo.py)
-- [8.xgboost](ml/gbdt/XgboostDemo.py)
+一. 机器学习算法实现
+----------------
+使用pandas, numpy实现几种机器学习算法  
+使用sklearn的评分包对算法进行评价  
 
-## 数据处理
-- [PCA](ml/datahandle/PCA.py)
+- [0. PCA](ml/datahandle/PCA.py)  
+- [1. 决策树](ml/supervised/DessionTree.py)  
+- [2. 线性回归](ml/supervised/LinearRegression.py)  
+- [3. 逻辑回归](ml/supervised/LogisticRegression.py)  
+- [4. 高斯混合模型](ml/unsupervised/GaussianMixtureByEM.py)  
+- [5. Kmeans](ml/unsupervised/Kmeans.py)  
+- [6. Adaboost-线性加权lR](ml/supervised/AdaBoost.py) - tanh激活函数待改善  
+- [7. gbdt-pipeline,网格搜索](ml/gbdt/GbdtDemo.py)  
+- [8. xgboost](ml/gbdt/XgboostDemo.py)  
+
+二. 数据处理
+----------------
+#### 2.1 Instance
 - [matplotlab - 泰坦尼克生还者](preproccess/TitanicPlot.py)
 - [数据编码,倾斜处理](preproccess/HandleDatasets.py)
 
-## Blog
+#### 2.2 pandas数据预处理
+- [1-pandas数据结构.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/1-pandas%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.ipynb)
+- [2-pandas数据加载与文件格式.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/2-pandas%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E4%B8%8E%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F.ipynb)
+- [3-清洗数据与数据准备.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/3-%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87.ipynb)
+- [4-聚合,合并,重塑.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/4-%E8%81%9A%E5%90%88%2C%E5%90%88%E5%B9%B6%2C%E9%87%8D%E5%A1%91.ipynb)
+- [5-matplotlib绘图与可视化.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/5-%E7%BB%98%E5%9B%BE%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96.ipynb)
+- [6-pandas与seaborn高级绘图.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/6-pandas%E4%B8%8Eseaborn%E9%AB%98%E7%BA%A7%E7%BB%98%E5%9B%BE.ipynb)
+- [7-聚合与分组.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/7-%E8%81%9A%E5%90%88%E4%B8%8E%E5%88%86%E7%BB%84.ipynb)
+- [8-pandas时间序列.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/79a8d722ec8d65deffc937ae5615f0cbca0219b2/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/8-pandas%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97.ipynb)
+- [9-pandas高级应用.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/79a8d722ec8d65deffc937ae5615f0cbca0219b2/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/9-pandas%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8.ipynb)
+
+
+三. Blog
+--------------------------------
+- [Jupyter-spark环境](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/Jupyter-spark%E9%85%8D%E7%BD%AE.ipynb)
 - [0-数据预处理.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/0-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86.ipynb)
-- [1-高斯混合与EM算法.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/1-%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E4%B8%8EEM%E7%AE%97%E6%B3%95.ipynb)
-- [4-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/4-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.ipynb)
-- [5-CART决策树.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/5-决策树.ipynb)
-#### I. 聚类与检索  
-- [聚类与检索(KNN,TF-IDF,KD-Tree,K-Means,EM](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2%28KNN%2CTF-IDF%2CKD-Tree%2CK-Means%2CEM%29.ipynb)
-- [LDA与混合关系模型](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/2-LDA.ipynb)
+- [1-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/4-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.ipynb)
+- [2-CART决策树.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/5-决策树.ipynb)
+
+#### 3.1 聚类与检索  
+- [1-聚类与检索(KNN,TF-IDF,KD-Tree,K-Means,EM](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2%28KNN%2CTF-IDF%2CKD-Tree%2CK-Means%2CEM%29.ipynb)
+- [2-LDA与混合关系模型](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/2-LDA.ipynb)
+- [3-Hierarchical Clustering](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/3-Hierarchical%20Clustering.ipynb)
 
 
-## Tuning Parameters
+四. Tuning Parameters
+------------------------------
 - [GBDT](blog/GBM_Tuning_Parameters.pdf)
 
-## Jupyter-spark环境
-- [pySpark与scala spark](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/Jupyter-spark%E9%85%8D%E7%BD%AE.ipynb)
 
-## 数学技能书
+
+
+五. Mathematics
+------------------------------
 ### 第一层
 #### 1. 点集拓扑 
-1. [点集拓扑-王彦英.avi](http://v.youku.com/v_show/id_XNzM4MjU5ODg=.html?spm=a2h1n.8251843.playList.5~5~A&f=22245870&o=1)
-2. [点集拓扑讲义-与上面视频配套书籍](https://page72.ctfile.com/fs/1623972-206656801)
-3. [基础拓扑学-阿姆斯壮](http://www.hejizhan.com/html/res/268.html)
+- [点集拓扑-王彦英.avi](http://v.youku.com/v_show/id_XNzM4MjU5ODg=.html?spm=a2h1n.8251843.playList.5~5~A&f=22245870&o=1)
+- [点集拓扑讲义-与上面视频配套书籍](https://page72.ctfile.com/fs/1623972-206656801)
+- [基础拓扑学-阿姆斯壮](http://www.hejizhan.com/html/res/268.html)
 #### 2. 抽象代数
 #### 3. 高等代数与矩阵
 ### 第二层

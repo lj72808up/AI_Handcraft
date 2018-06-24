@@ -43,6 +43,12 @@
 - [2-LDA与混合关系模型](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/2-LDA.ipynb)
 - [3-Hierarchical Clustering](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/3-Hierarchical%20Clustering.ipynb)
 
+#### 3.2 贝叶斯方法-概率编程与贝叶斯推断
+- [1-贝叶斯哲学](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E6%96%AD%E4%B8%8E%E6%A6%82%E7%8E%87%E7%BC%96%E7%A8%8B/1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%93%B2%E5%AD%A6.ipynb)
+- [2-进一步PyMC](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E6%96%AD%E4%B8%8E%E6%A6%82%E7%8E%87%E7%BC%96%E7%A8%8B/2-%E8%BF%9B%E4%B8%80%E6%AD%A5PyMC.ipynb)
+-[3-打开MCMC的黑箱](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%8E%A8%E6%96%AD%E4%B8%8E%E6%A6%82%E7%8E%87%E7%BC%96%E7%A8%8B/3-%E6%89%93%E5%BC%80MCMC%E7%9A%84%E9%BB%91%E7%AE%B1.ipynb)
+
+
 
 四. Tuning Parameters
 ------------------------------

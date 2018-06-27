@@ -1,0 +1,1548 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "idx = pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "idx = pd.date_range('20000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index-idx)\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "idx = pd.date_range('20000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index=idx)\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "idx = pd.date_range('2000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index=idx)\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "import numpy as np\n",
+    "idx = pd.date_range('2000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index=idx)\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "import numpy as np\n",
+    "np.random.seed(1)\n",
+    "idx = pd.date_range('2000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index=idx)\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "import numpy as np\n",
+    "np.random.seed(1)\n",
+    "idx = pd.date_range('2000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index=idx)\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "import numpy as np\n",
+    "np.random.seed(1)\n",
+    "idx = pd.date_range('2000-01-01',periods=100,freq='D')\n",
+    "ts = pd.Series(np.random.rand(100),index=idx)\n",
+    "ts.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts.resample('M')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts.resample('M').mean()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts.resample(freq='M').mean()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts.resample??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts.resample('M').mean()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng = pd.Series(np.arrange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "ts"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "rng"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "print rng\n",
+    "print rng.resample('5min',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "print rng\n",
+    "print rng.resample('5min',closed='right',label='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "print rng\n",
+    "print \n",
+    "print rng.resample('5min',closed='right',label='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print 'label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12),index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5min',closed='right',label='left',offset='-2.5').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5min',closed='right',label='left',loffset='-2.5').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5min',closed='right',label='left',loffset='-2.5min').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5min',closed='right',label='right',loffset='-2.5min').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# offset参数\n",
+    "print rng.resample('5min',closed='right',label='right',loffset='-2.5min').sum()\n",
+    "print\n",
+    "print rng.resample('5min',closed='right',label='left',loffset='+2.5min').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# offset参数\n",
+    "print rng.resample('5min',closed='right',label='right',loffset='-2.5min').sum()\n",
+    "print\n",
+    "print rng.resample('5min',closed='right',label='left',loffset='+2.5T').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# offset参数\n",
+    "print rng.resample('5min',closed='right',label='right',loffset='-2.5min').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01 12:01:00',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01 12:00:00',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01 12:01:00',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01 12:00:00',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='right',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01 12:00:00',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='left',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.Series(np.arange(12),periods=12,freq='M')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.Series(np.arange(12),index = pd.date_range(periods=12,freq='M'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.Series(np.arange(12),index = pd.date_arange(periods=12,freq='M'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.Series(np.arange(12),index = pd.date_range('2001-01-01',periods=12,freq='M'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.Series(np.arange(12),index = pd.date_range('2001-01-01',periods=12,freq='D'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12),index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "ts.resample('5D').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12),index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "ts.resample('5D',closed=right).sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12),index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "ts.resample('5D',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12),index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "ts.resample('5D',label='right',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "ts.resample('5D',label='right',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print ts.resample('5D',label='right',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='right').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-02',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-02',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='left').sum()\n",
+    "print ts.resample('5D')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-02',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='left').sum()\n",
+    "print ts.resample('5D').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5D').olhc()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5D').ohlc()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rng.resample('5min').ohlc()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 如下产生每分钟的数据\n",
+    "rng = pd.Series(np.arange(12)+1,index=pd.date_range('2000-01-01 12:00:00',periods=12,freq='T'))\n",
+    "print rng\n",
+    "# 2. 每5分钟设为一个bin\n",
+    "print '===> label=right'\n",
+    "print rng.resample('5min',closed='right',label='right').sum()\n",
+    "print ('===> label=left')\n",
+    "print rng.resample('5min',closed='left',label='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ts = pd.Series(np.arange(12)+1,index = pd.date_range('2001-01-01',periods=12,freq='D'))\n",
+    "print ts\n",
+    "print\n",
+    "print ts.resample('5D',label='right',closed='right').sum()\n",
+    "print\n",
+    "print ts.resample('5D',label='left',closed='left').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print rng\n",
+    "rng.resample('5min').ohlc()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# resample默认lable='left', closed='left'\n",
+    "print rng\n",
+    "rng.resample('5min').ohlc()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.Date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio']))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.Date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.Date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio']))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.Date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 71,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='D'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='W-WEN'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='W-WED'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-27',periods=2,freq='W-FRI'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-01',periods=2,freq='W-FRI'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 77,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-05-26',periods=2,freq='W-FRI'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 78,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-06-26',periods=2,freq='W-FRI'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 79,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-06-27',periods=2,freq='W-FRI'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.seed(1)\n",
+    "df = pd.DataFrame(np.random.rand(2,4),\n",
+    "                  index=pd.date_range('2018-06-27',periods=2,freq='W-WED'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 将时间频率提升到天\n",
+    "df.resample('D').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D').asfreq().ffill??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D').ffill??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D').ffill()??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D').ffill()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.fillna??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('D').ffill(limit=2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('W-THS')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('W-THU')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('W-THU').asfreq"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 93,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('W-THU').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.resample('W-THU').ffill()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 95,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#### 五. 通过时期重采样"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 96,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 97,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4))\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 98,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.rand(24,4))\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 99,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2018-12',freq = 'M'))\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 100,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 101,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 102,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 降采样\n",
+    "df.resample('A-DEC')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 降采样\n",
+    "df.resample('A-DEC').mean()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 104,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 105,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 106,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 降采样 \n",
+    "df.resample('A-FEB').mean()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 107,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = '6M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 108,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randn(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 109,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randint(24,4),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.random.randint??"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.DataFrame(np.random.randint(1,5,(24,4)),\n",
+    "                 index = pd.period_range('2018-01','2019-12',freq = 'M'),\n",
+    "                 columns=['Colorado', 'Texas', 'New York', 'Ohio'])\n",
+    "df.head()\n",
+    "df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 降采样 \n",
+    "df.resample('A-FEB').mean()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 2.升采样\n",
+    "df.resample('Q-DEC').ffill()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 2.升采样\n",
+    "df.resample('Q-DEC').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 降采样 \n",
+    "# 每年开始,到每年的2月份最后一天为一个period\n",
+    "annual_df = df.resample('A-FEB').mean()\n",
+    "annual_frame"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. 降采样 \n",
+    "# 每年开始,到每年的2月份最后一天为一个period\n",
+    "annual_df = df.resample('A-FEB').mean()\n",
+    "annual_df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 2.升采样\n",
+    "annual_df.resample('Q-DEC').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 2.升采样\n",
+    "annual_df.resample('Q-FEB').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 2.升采样 : 指定新频率中区间的哪端存放原来的值\n",
+    "annual_df.resample('Q-FEB').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 2.升采样 : 指定新频率中区间的哪端存放原来的值\n",
+    "# 默认convention=start, 原始值存放在开始处. 也可设置convention=end\n",
+    "annual_df.resample('Q-FEB').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "annual_df.resample('Q-FEB',convention='end').asfreq()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 122,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按季度统计\n",
+    "obj = pd.Series(np.random.randint(1,5,size=(20,1)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 123,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按季度统计\n",
+    "obj = pd.Series(np.random.randint(1,5,size=(20,)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按季度统计\n",
+    "obj = pd.Series(np.random.randint(1,5,size=(20,)))\n",
+    "obj"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按季度统计\n",
+    "obj = pd.Series(np.random.randint(1,5,size=(8,)),\n",
+    "               index=pd.date_range('2018-1-1',periods=8,freq='M'))\n",
+    "obj"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obj.resample('Q')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obj.resample('Q').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按季度统计\n",
+    "obj = pd.Series(np.random.randint(1,5,size=(24,)),\n",
+    "               index=pd.date_range('2018-1-1',periods=24,freq='M'))\n",
+    "obj"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obj.resample('Q').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obj.resample('Q-DEC').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obj.resample('Q').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 132,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 按季度统计\n",
+    "obj = pd.Series(np.random.randint(1,5,size=(24,)),\n",
+    "               index=pd.date_range('2018-1-1',periods=24,freq='M'))\n",
+    "print obj.head()\n",
+    "print \n",
+    "print obj.resample('Q').sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.read_csv('example/stock_px_2.csv')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 134,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pd.read_csv('../example/stock_px_2.csv')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.read_csv('../example/stock_px_2.csv')\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.AAPL.plot()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlibt.pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df.AAPL.plot()"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

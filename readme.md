@@ -27,7 +27,7 @@
 - [5-matplotlib绘图与可视化.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/5-%E7%BB%98%E5%9B%BE%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96.ipynb)
 - [6-pandas与seaborn高级绘图.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/6-pandas%E4%B8%8Eseaborn%E9%AB%98%E7%BA%A7%E7%BB%98%E5%9B%BE.ipynb)
 - [7-聚合与分组.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/7-%E8%81%9A%E5%90%88%E4%B8%8E%E5%88%86%E7%BB%84.ipynb)
-- [8-pandas时间序列.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/79a8d722ec8d65deffc937ae5615f0cbca0219b2/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/8-pandas%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97.ipynb)
+- [8-pandas时间序列.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/8-pandas%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97.ipynb)
 - [9-pandas高级应用.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/79a8d722ec8d65deffc937ae5615f0cbca0219b2/blog/pandas%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/9-pandas%E9%AB%98%E7%BA%A7%E5%BA%94%E7%94%A8.ipynb)
 
 

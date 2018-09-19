@@ -35,7 +35,9 @@
 --------------------------------
 - [Jupyter-spark环境](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/Jupyter-spark%E9%85%8D%E7%BD%AE.ipynb)
 - [0-数据预处理.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/0-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86.ipynb)
-- [1-推荐系统.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/4-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.ipynb)
+- [2-线性回归与逻辑回归](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/d79fdd7d50ddffcb1b81abbcdceb6974a476a628/blog/2-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92.ipynb)
+- [3-生成模型(高吸判别与朴素贝叶斯)](https://github.com/lj72808up/ML_Handcraft/blob/d79fdd7d50ddffcb1b81abbcdceb6974a476a628/blog/3-%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B(%E9%AB%98%E6%96%AF%E5%88%A4%E5%88%AB,%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF).ipynb)
+- [4-svm](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/4-svm.ipynb)
 - [2-CART决策树.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/5-决策树.ipynb)
 
 #### 3.1 聚类与检索  

@@ -41,7 +41,12 @@
 - [2-CART决策树.ipynb](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/5-决策树.ipynb)
 
 #### 3.1 聚类与检索  
-- [1-聚类与检索(KNN,TF-IDF,KD-Tree,K-Means,EM](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2%28KNN%2CTF-IDF%2CKD-Tree%2CK-Means%2CEM%29.ipynb)
+- [1-聚类与检索(KNN,TF-IDF,KD-Tree,K-Means,EM]
+    * [1.1 K-NN](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/d5bdd5a4571dc2e0b491ea5b6585241a4dfc106f/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-1%20%20KNN%2CTF-IDF.ipynb)
+    * [1.2 KD树](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/d5bdd5a4571dc2e0b491ea5b6585241a4dfc106f/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-2%20KD%E6%A0%91.ipynb)
+    * [1.3 局部敏感哈希](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/d5bdd5a4571dc2e0b491ea5b6585241a4dfc106f/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-3%20%E5%B1%80%E9%83%A8%E6%95%8F%E6%84%9F%E5%93%88%E5%B8%8C.ipynb)
+    * [1.4 KMeans](https://github.com/lj72808up/ML_Handcraft/blob/d5bdd5a4571dc2e0b491ea5b6585241a4dfc106f/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-4%20Kmeans.ipynb)
+    * [1.5 搞死混合EM](https://github.com/lj72808up/ML_Handcraft/blob/d5bdd5a4571dc2e0b491ea5b6585241a4dfc106f/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/1-5%20%E6%B7%B7%E5%90%88%E9%AB%98%E6%96%AFEM.ipynb)
 - [2-LDA与混合关系模型](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/master/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/2-LDA.ipynb)
 - [3-Hierarchical Clustering](http://nbviewer.jupyter.org/github/lj72808up/ML_Handcraft/blob/174c79b7b0f989818c8edcd63b45512e02f2c87e/blog/%E8%81%9A%E7%B1%BB%E4%B8%8E%E6%A3%80%E7%B4%A2/3-Hierarchical%20Clustering.ipynb)
 
